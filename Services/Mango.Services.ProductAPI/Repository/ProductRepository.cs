@@ -17,14 +17,37 @@ namespace Mango.Services.ProductAPI.Repository
             _mapper = mapper;
         }
 
-        public Task<ProductDto> CreateUpdateProduct(ProductDto name)
+        public async Task<ProductDto> CreateUpdateProduct(ProductDto productDto)
         {
-            throw new NotImplementedException();
+            Product product = _mapper.Map<ProductDto, Product>(productDto);
+            if(product.ProductId != Guid.Empty)
+            {
+                _context.Products.Update(product);
+            }
+            else
+            {
+                _context.Products.Add(product);
+            }
+            await _context.SaveChangesAsync();
+            return _mapper.Map<Product, ProductDto>(product);
         }
 
-        public Task<bool> DeleteProduct(Guid name)
+        public async Task<bool> DeleteProduct(Guid id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Product product = await _context.Products.FirstOrDefaultAsync(x => x.ProductId == id);
+                if(product == null)
+                    return false;
+                _context.Products.Remove(product);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
         }
 
         public async Task<ProductDto> GetProductById(Guid id)
