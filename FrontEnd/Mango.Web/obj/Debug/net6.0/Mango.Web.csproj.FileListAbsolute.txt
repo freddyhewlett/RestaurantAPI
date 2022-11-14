@@ -24,3 +24,6 @@ D:\Workplace\VS Community\MangoRestaurant\FrontEnd\Mango.Web\obj\Debug\net6.0\re
 D:\Workplace\VS Community\MangoRestaurant\FrontEnd\Mango.Web\obj\Debug\net6.0\Mango.Web.pdb
 D:\Workplace\VS Community\MangoRestaurant\FrontEnd\Mango.Web\obj\Debug\net6.0\Mango.Web.genruntimeconfig.cache
 D:\Workplace\VS Community\MangoRestaurant\FrontEnd\Mango.Web\obj\Debug\net6.0\ref\Mango.Web.dll
+D:\Workplace\VS Community\MangoRestaurant\FrontEnd\Mango.Web\bin\Debug\net6.0\libman.json
+D:\Workplace\VS Community\MangoRestaurant\FrontEnd\Mango.Web\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Workplace\VS Community\MangoRestaurant\FrontEnd\Mango.Web\obj\Debug\net6.0\Mango.Web.csproj.CopyComplete
