@@ -29,7 +29,7 @@ namespace IdentityServerHost.Quickstart.UI
     public class AccountController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _signinManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
 
         private readonly IIdentityServerInteractionService _interaction;
@@ -43,7 +43,7 @@ namespace IdentityServerHost.Quickstart.UI
             IAuthenticationSchemeProvider schemeProvider,
             IEventService events,
             UserManager<ApplicationUser> userManager,
-            SignInManager<ApplicationUser> signinManager,
+            SignInManager<ApplicationUser> signInManager,
             RoleManager<IdentityRole> roleManager
             )
         {
@@ -55,7 +55,7 @@ namespace IdentityServerHost.Quickstart.UI
             _schemeProvider = schemeProvider;
             _events = events;
             _userManager = userManager;
-            _signinManager = signinManager;
+            _signInManager = signInManager;
             _roleManager = roleManager;
         }
 
@@ -116,7 +116,7 @@ namespace IdentityServerHost.Quickstart.UI
 
             if (ModelState.IsValid)
             {
-                var result = await _signinManager.PasswordSignInAsync(model.Username, model.Password, model.RememberLogin, lockoutOnFailure: false);
+                var result = await _signInManager.PasswordSignInAsync(model.Username, model.Password, model.RememberLogin, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
                     var user = await _userManager.FindByNameAsync(model.Username);
@@ -125,12 +125,22 @@ namespace IdentityServerHost.Quickstart.UI
                         clientId: context?.Client.ClientId));
 
                     if (context != null)
+                    {
                         return Redirect(model.ReturnUrl);
+                    }                        
 
                     if (Url.IsLocalUrl(model.ReturnUrl))
+                    {
                         return Redirect(model.ReturnUrl);
+                    }
                     else if (string.IsNullOrEmpty(model.ReturnUrl))
+                    {
                         return Redirect("~/");
+                    }
+                    else
+                    {
+                        throw new Exception("invalid return url");
+                    }
                 }
 
                 await _events.RaiseAsync(new UserLoginFailureEvent(model.Username, "invalid credentials", clientId:context?.Client.ClientId));
@@ -175,7 +185,7 @@ namespace IdentityServerHost.Quickstart.UI
             if (User?.Identity.IsAuthenticated == true)
             {
                 // delete local authentication cookie
-                await _signinManager.SignOutAsync();
+                await _signInManager.SignOutAsync();
 
                 // raise the logout event
                 await _events.RaiseAsync(new UserLogoutSuccessEvent(User.GetSubjectId(), User.GetDisplayName()));
@@ -255,7 +265,7 @@ namespace IdentityServerHost.Quickstart.UI
                             new Claim(JwtClaimTypes.Role,"User") });
 
                     var context = await _interaction.GetAuthorizationContextAsync(model.ReturnUrl);
-                    var loginresult = await _signinManager.PasswordSignInAsync(model.Username, model.Password, false, lockoutOnFailure: true);
+                    var loginresult = await _signInManager.PasswordSignInAsync(model.Username, model.Password, false, lockoutOnFailure: true);
                     if (loginresult.Succeeded)
                     {
                         var checkuser = await _userManager.FindByNameAsync(model.Username);
