@@ -27,3 +27,12 @@ D:\Workplace\VS Community\MangoRestaurant\FrontEnd\Mango.Web\obj\Debug\net6.0\re
 D:\Workplace\VS Community\MangoRestaurant\FrontEnd\Mango.Web\bin\Debug\net6.0\libman.json
 D:\Workplace\VS Community\MangoRestaurant\FrontEnd\Mango.Web\bin\Debug\net6.0\Newtonsoft.Json.dll
 D:\Workplace\VS Community\MangoRestaurant\FrontEnd\Mango.Web\obj\Debug\net6.0\Mango.Web.csproj.CopyComplete
+D:\Workplace\VS Community\MangoRestaurant\FrontEnd\Mango.Web\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+D:\Workplace\VS Community\MangoRestaurant\FrontEnd\Mango.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Workplace\VS Community\MangoRestaurant\FrontEnd\Mango.Web\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Workplace\VS Community\MangoRestaurant\FrontEnd\Mango.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Workplace\VS Community\MangoRestaurant\FrontEnd\Mango.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Workplace\VS Community\MangoRestaurant\FrontEnd\Mango.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Workplace\VS Community\MangoRestaurant\FrontEnd\Mango.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Workplace\VS Community\MangoRestaurant\FrontEnd\Mango.Web\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Workplace\VS Community\MangoRestaurant\FrontEnd\Mango.Web\bin\Debug\net6.0\System.Security.Permissions.dll
