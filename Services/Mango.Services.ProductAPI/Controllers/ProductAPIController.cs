@@ -17,7 +17,6 @@ namespace Mango.Services.ProductAPI.Controllers
             _response = new ResponseDto();
         }
 
-        [Authorize]
         [HttpGet]
         public async Task<ResponseDto> Get()
         {
@@ -35,7 +34,6 @@ namespace Mango.Services.ProductAPI.Controllers
         }
 
         [HttpGet]
-        [Authorize]
         [Route("{id}")]
         public async Task<ResponseDto> Get(Guid id)
         {
