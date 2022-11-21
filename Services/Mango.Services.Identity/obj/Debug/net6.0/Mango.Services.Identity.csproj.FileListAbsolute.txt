@@ -1,5 +1,6 @@
 D:\Workplace\VS Community\MangoRestaurant\Services\Mango.Services.Identity\bin\Debug\net6.0\appsettings.Development.json
 D:\Workplace\VS Community\MangoRestaurant\Services\Mango.Services.Identity\bin\Debug\net6.0\appsettings.json
+D:\Workplace\VS Community\MangoRestaurant\Services\Mango.Services.Identity\bin\Debug\net6.0\keys\is-signing-key-C0CAEA66F3B59B210A4344A53EDA613C.json
 D:\Workplace\VS Community\MangoRestaurant\Services\Mango.Services.Identity\bin\Debug\net6.0\Mango.Services.Identity.staticwebassets.runtime.json
 D:\Workplace\VS Community\MangoRestaurant\Services\Mango.Services.Identity\bin\Debug\net6.0\Mango.Services.Identity.exe
 D:\Workplace\VS Community\MangoRestaurant\Services\Mango.Services.Identity\bin\Debug\net6.0\Mango.Services.Identity.deps.json
@@ -73,4 +74,3 @@ D:\Workplace\VS Community\MangoRestaurant\Services\Mango.Services.Identity\obj\D
 D:\Workplace\VS Community\MangoRestaurant\Services\Mango.Services.Identity\obj\Debug\net6.0\Mango.Services.Identity.pdb
 D:\Workplace\VS Community\MangoRestaurant\Services\Mango.Services.Identity\obj\Debug\net6.0\Mango.Services.Identity.genruntimeconfig.cache
 D:\Workplace\VS Community\MangoRestaurant\Services\Mango.Services.Identity\obj\Debug\net6.0\ref\Mango.Services.Identity.dll
-D:\Workplace\VS Community\MangoRestaurant\Services\Mango.Services.Identity\bin\Debug\net6.0\keys\is-signing-key-C0CAEA66F3B59B210A4344A53EDA613C.json

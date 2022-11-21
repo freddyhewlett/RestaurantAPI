@@ -1,4 +1,4 @@
-﻿using Mango.Web.Models;
+﻿using Mango.Web.Models.Dto;
 using Mango.Web.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
