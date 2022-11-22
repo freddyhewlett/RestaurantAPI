@@ -125,7 +125,7 @@ namespace Mango.Services.ShoppingCartAPI.Controllers
                     return BadRequest();
                 }
                 checkoutHeader.CartDetails = cartDto.CartDetails;
-                //TODO addmessage logic for order processing
+                //TODO add message logic for order processing
 
             }
             catch (Exception ex)
