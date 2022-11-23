@@ -69,3 +69,4 @@ D:\Workplace\VS Community\MangoRestaurant\Services\Mango.Services.OrderAPI\obj\D
 D:\Workplace\VS Community\MangoRestaurant\Services\Mango.Services.OrderAPI\obj\Debug\net6.0\Mango.Services.OrderAPI.pdb
 D:\Workplace\VS Community\MangoRestaurant\Services\Mango.Services.OrderAPI\obj\Debug\net6.0\Mango.Services.OrderAPI.genruntimeconfig.cache
 D:\Workplace\VS Community\MangoRestaurant\Services\Mango.Services.OrderAPI\obj\Debug\net6.0\ref\Mango.Services.OrderAPI.dll
+D:\Workplace\VS Community\MangoRestaurant\Services\Mango.Services.OrderAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
