@@ -36,7 +36,9 @@ namespace Mango.Services.OrderAPI.Messaging
 
             var client = new ServiceBusClient(serviceBusConnectionString);
 
-            checkoutProcessor = client.CreateProcessor(checkoutMessageTopic, subscriptionCheckout);
+            // using queue in Azure Bus can be forwarded to topic when created and there is no need to modify code. In this case I'm testing the functionality of queues
+            //checkoutProcessor = client.CreateProcessor(checkoutMessageTopic, subscriptionCheckout); //--> Method overload takes 2 parameters for topics
+            checkoutProcessor = client.CreateProcessor(checkoutMessageTopic); // Method overload takes 1 parameter for queue
             orderUpdatePaymentStatusProcessor = client.CreateProcessor(orderUpdatePaymentResultTopic, subscriptionCheckout);
         }
 
@@ -118,7 +120,8 @@ namespace Mango.Services.OrderAPI.Messaging
                 CVV = orderHeader.CVV,
                 ExpireMonthYear = orderHeader.ExpireMonthYear,
                 OrderId = orderHeader.OrderHeaderId,
-                OrderTotal = orderHeader.OrderTotal
+                OrderTotal = orderHeader.OrderTotal,
+                Email = orderHeader.Email
             };
 
             try
